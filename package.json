@@ -1,0 +1,26 @@
+{
+  "name": "ChronoChat",
+  "version": "1.0.0",
+  "description": "A chat application for NDN built on electron.js",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=src/assets/icons/ndn.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . chronochat --overwrite --asar=true --platform=win32 --arch=ia32 --icon=src/assets/icons/ndn.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ChronoChat\"",
+    "package-linux": "electron-packager . chronochat --overwrite --asar=true --platform=linux --arch=x64 --icon=src/assets/icons/ndn.png --prune=true --out=release-builds"
+  },
+  "repository": "https://github.com/H-Huang/chronochat-electron",
+  "keywords": [
+    "Electron",
+    "NDN",
+    "Named Data Networking",
+    "ChronoChat",
+    "ChronoSync"
+  ],
+  "author": "Howard Huang",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^2.0.0",
+    "electron-packager": "^12.1.0"
+  }
+}

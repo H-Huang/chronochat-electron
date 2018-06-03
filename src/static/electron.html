@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<!--
+ * Copyright (C) 2013-2017 Regents of the University of California.
+ * @author: Qiuhan Ding <dingqiuhan@gmail.com>
+ * @author: Wentao Shang <wentaoshang@gmail.com>
+ * @author: Jeff Thompson <jefft0@remap.ucla.edu>
+ * @author: Howard Huang <howardhuang@ucla.edu>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * A copy of the GNU Lesser General Public License is in the file COPYING.
+-->
+
+<html>
+
+<head>
+  <title>ChronoChat</title>
+  <link rel="stylesheet" type="text/css" href="../lib/bootstrap/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="../css/connect.css" />
+  <link rel="stylesheet" type="text/css" href="../css/chat.css" />
+  <meta charset="utf-8">
+
+  <!-- Insert this line above script imports  -->
+  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+  <script src="../lib/jquery-1.10.1.min.js"></script>
+  <script src="../lib/jquery-color.js"></script>
+  <script src="../lib/bootstrap/bootstrap.js"></script>
+  <script src="../lib/Protobuf/long.min.js"></script>
+  <script src="../lib/Protobuf/bytebuffer-ab.min.js"></script>
+  <script src="../lib/Protobuf/protobuf.min.js"></script>
+  <script src="../lib/ndn.js"></script>
+  <script src="../js/chronochat.js"></script>
+  <script src="../js/chatbuf.js"></script>
+  <script src="../js/security.js"></script>
+  <script src="../js/start-chronochat.js"></script>
+  <script src="../js/ui.js"></script>
+
+  <!-- Insert this line after script imports -->
+  <script>if (window.module) module = window.module;</script>
+</head>
+
+<body>
+  <div id="wrapper" class="container-fluid">
+    <div id="connectionBox">
+      <h1>ChronoChat</h1>
+      <p class="label">Name</p>
+      <input id="name" class="field mandatory" type="text" />
+      <p class="label">Chatroom</p>
+      <input id="chatroom" class="field" type="text" value="ndnchat" onFocus="fieldFocus(this, 'ndnchat');" onblur="fieldBlur(this, 'ndnchat');"
+      />
+      <p class="label">Hub Prefix</p>
+      <input id="hubPrefix" class="field" type="text" value="ndn/edu/ucla/remap" onFocus="fieldFocus(this, 'ndn/edu/ucla/remap');"
+        onblur="fieldBlur(this, 'ndn/edu/ucla/remap');" />
+      <p class="label">Hub</p>
+      <input id="hub" class="field" type="text" value="spurs.cs.ucla.edu" onFocus="fieldFocus(this, 'spurs.cs.ucla.edu');" onblur="fieldBlur(this, 'spurs.cs.ucla.edu');"
+      />
+      <p id="microForwarderLabel" class="label">micro forwarder</p>
+      <div id="microForwarder">
+        <input type="radio" name="face" value="microForwarder"> Micro Forwarder</div>
+      <p id="errorMessage"></p>
+      <input id="connect" class="btn" type="submit" value="Connect">
+    </div>
+
+    <div id="chatBox" class="row">
+      <div id="chatWrapper" class="col-md-6 offset-md-2 panel">
+        <div id="chatActions" class="row">
+        </div>
+        <div class="row">
+          <div id="roomInfo"></div>
+          <!-- <button id="send" onclick="chronoChat.sendMessage()">send</button> -->
+          <button id="leave" onclick="chronoChat.leave()">leave</button>
+          <span id="chatActionsText"></span>
+        </div>
+        <div id="chat" class="row">
+          <div id="txt"></div>
+        </div>
+        <div class="row">
+          <input id="messageInput" type="text" placeholder="Type a message..." onkeyup="checkKey(event)">
+        </div>
+      </div>
+      <div id="membershipInfo" class="col-md-2 panel">
+          <div id="members">
+            <div id="memberTitle">Members</div>
+            <ul id="memberList">
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // You can also require other files to run in this process
+    require('../js/renderer.js');
+  </script>
+</html>

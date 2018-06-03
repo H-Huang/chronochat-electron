@@ -1,0 +1,180 @@
+#chatBox {
+    display: table;
+    padding: 10vh 20vw;
+    height: 80vh;
+}
+
+.panel {
+    display: table-cell;
+    background-color: white;
+}
+
+#roomInfo {
+    font-size: 1.75vw;
+    background-color: white;
+    padding: 5px;
+    width: 100%;
+    border-bottom: 1px solid #AAA;
+}
+
+#messageInput {
+    height: 2vw;
+    background: #FFF;
+    border: #ccc 1px solid;
+    border-top: #ccc 2px solid;
+    border-bottom: #ccc 2px solid;
+    border-radius: 4px;
+    width: 100%;
+    color: #000;
+    font-size: 1.25vw;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    /* for vertical scrollbars */
+    height: 4px;
+    /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+#chat {
+    height: 60vh;
+    display: flex;
+    padding: 5px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+}
+
+#txt {
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    width: 100%;
+    overflow-y: auto;
+}
+
+#txt p {
+    margin: 2px;
+}
+
+.chatBoxMessage {
+    display: block;
+}
+
+.chatBoxMessage > p{
+    display: inline-block;
+}
+
+.joinedChatText {
+    font-size: 1.5vw;
+    color: #AAA;
+}
+
+.messageInfo {
+    font-size: 1.25vw;
+    color: rgb(179, 177, 177);
+}
+
+.message {
+    min-width: 15%;
+    padding: 6px;
+    font-size: 1.5vw;
+    background-color: white;
+    border: #ccc 1px solid;
+    border-radius: 4px;
+}
+
+.ownMessage {
+    min-width: 15%;
+    padding: 6px;
+    font-size: 1.5vw;
+    color: white;
+    background-color: rgb(0,132,255);
+    border: #ccc 1px solid;
+    border-radius: 4px;
+}
+
+.dateText {
+    padding-top: 2px;
+    text-align: right;
+    font-size: .8vw;
+    color: gray;
+    display: block;
+}
+
+.ownDateText {
+    padding-top: 2px;
+    text-align: right;
+    font-size: .8vw;
+    color: white;
+    display: block;
+}
+
+#membershipInfo {
+    min-width: 10vw;
+    background-color: white;
+    padding: 5px;
+    border-left: #ccc 1px solid;
+}
+
+#memberList {
+    padding: 0px;
+}
+
+#memberList:first-child li{
+    border-top: 1px solid #ccc;
+}
+
+#memberList li {
+    font-size: 1vw;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    display: block;
+   
+    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+#memberList li:hover {
+    background: #f6f6f6;
+}
+
+#chatActions {
+    padding-top: 5px;
+}
+
+#leave {
+    color: white;
+    background-color: rgb(204, 202, 202);
+
+    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+#leave:hover {
+    background: #ee1c1c;
+}
+
+#chatActionsText {
+    margin-left: 5px;
+}
+
+#memberTitle {
+    padding: 20px;
+    font-size: 1.5vw;
+}
