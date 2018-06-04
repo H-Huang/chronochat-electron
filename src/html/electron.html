@@ -26,13 +26,12 @@
 <head>
   <title>ChronoChat</title>
   <link rel="stylesheet" type="text/css" href="../lib/bootstrap/bootstrap.css" />
-  <link rel="stylesheet" type="text/css" href="../css/connect.css" />
-  <link rel="stylesheet" type="text/css" href="../css/chat.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/connect.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/chat.css" />
   <meta charset="utf-8">
-
-  <!-- Insert this line above script imports  -->
+  
+  
   <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
-
   <script src="../lib/jquery-1.10.1.min.js"></script>
   <script src="../lib/jquery-color.js"></script>
   <script src="../lib/bootstrap/bootstrap.js"></script>
@@ -45,9 +44,8 @@
   <script src="../js/security.js"></script>
   <script src="../js/start-chronochat.js"></script>
   <script src="../js/ui.js"></script>
-
-  <!-- Insert this line after script imports -->
   <script>if (window.module) module = window.module;</script>
+  <script src='../js/electron.js'></script>
 </head>
 
 <body>
@@ -98,8 +96,4 @@
       </div>
     </div>
   </div>
-  <script>
-    // You can also require other files to run in this process
-    require('../js/renderer.js');
-  </script>
 </html>

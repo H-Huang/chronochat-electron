@@ -2,7 +2,7 @@
   "name": "ChronoChat",
   "version": "1.0.0",
   "description": "A chat application for NDN built on electron.js",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "electron .",
     "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=src/assets/icons/ndn.icns --prune=true --out=release-builds",
@@ -17,10 +17,16 @@
     "ChronoChat",
     "ChronoSync"
   ],
-  "author": "Howard Huang",
+  "author": {
+    "name": "Howard Huang",
+    "email": "howardhuang@ucla.edu"
+  },
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^2.0.0",
+    "electron": "2.0.2",
     "electron-packager": "^12.1.0"
+  },
+  "dependencies": {
+    "electron-windows-notifications": "^2.1.1"
   }
 }
