@@ -216,7 +216,7 @@ ChronoChat.prototype.onData = function (interest, co) {
 
     if (l == this.roster.length) {
       this.roster.push(name + session);
-      joinedChatText(this.screen_name, this.chatroom, t);
+      joinedChatText(name, this.chatroom, t);
       var objDiv = document.getElementById("txt");
       objDiv.scrollTop = objDiv.scrollHeight;
       clearMembershipList();
@@ -235,7 +235,7 @@ ChronoChat.prototype.onData = function (interest, co) {
     if (content.type == 0 && content.from != this.screen_name) {
       // Display on the screen will not display old data.
       // Encode special html characters to avoid script injection.
-      chatText(content.form, t, content.data, this.screen_name);
+      chatText(content.from, t, content.data, this.screen_name);
       var objDiv = document.getElementById("txt");
       objDiv.scrollTop = objDiv.scrollHeight;
     } else if (content.type == 2) {

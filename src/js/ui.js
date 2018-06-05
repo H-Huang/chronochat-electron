@@ -28,6 +28,11 @@ function clearMessageInput() {
     $("#messageInput").val("");
 }
 
+// TODO
+function leaveChatText() {
+
+}
+
 function leaveChat() {  
     $("#chatActionsText").text("Leaving chat in 3...");
     setTimeout(function() { $("#chatActionsText").text("Leaving chat in 2..."); }, 1000);
