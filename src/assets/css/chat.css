@@ -66,6 +66,7 @@
 
 .chatBoxMessage {
     display: block;
+    clear: both;
 }
 
 .chatBoxMessage > p{
@@ -92,6 +93,9 @@
 }
 
 .ownMessage {
+    float:right;
+    clear: both;
+
     min-width: 15%;
     padding: 6px;
     font-size: 1.5vw;
@@ -99,6 +103,11 @@
     background-color: rgb(0,132,255);
     border: #ccc 1px solid;
     border-radius: 4px;
+}
+
+.ownMessageInfo {
+    float:right;
+    clear: both;
 }
 
 .dateText {
@@ -156,6 +165,7 @@
 }
 
 #leave {
+    font-size: 1vw;
     color: white;
     background-color: rgb(204, 202, 202);
 

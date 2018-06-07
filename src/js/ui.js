@@ -50,9 +50,16 @@ function joinedChatText(name, chatroom, time) {
 function chatText(name, time, message, ownName) {
     strippedName = name.replace(/\s/g,'');
     // if class before does not have same name, add name
-    if (!$("#txt").children().last().children().eq(0).hasClass(strippedName)){
-        $("#txt").append($("<div class='chatBoxMessage'>")
-            .append($("<p class='messageInfo " + strippedName + "'>").text(name)));
+    if (name == ownName) {
+        if (!$("#txt").children().last().children().eq(0).hasClass(strippedName)){
+            $("#txt").append($("<div class='chatBoxMessage'>")
+                .append($("<p class='messageInfo ownMessageInfo " + strippedName + "'>").text(name)));
+        }
+    } else {
+        if (!$("#txt").children().last().children().eq(0).hasClass(strippedName)){
+            $("#txt").append($("<div class='chatBoxMessage'>")
+                .append($("<p class='messageInfo " + strippedName + "'>").text(name)));
+        }
     }
     // if the name is the current user have a different styling
     if (name == ownName) {
